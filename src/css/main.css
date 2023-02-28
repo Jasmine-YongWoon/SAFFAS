@@ -1,0 +1,163 @@
+html.fixed {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+/* Body */
+body {
+  font-size: 16px;
+  line-height: 1;
+  word-break: keep-all; /* 단어단위로 줄 바꿈 */
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+/* Inner */
+.inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+
+/* Header */
+header {
+  background-color: black;
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 8;
+}
+header ul.menu {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+header ul.menu li {
+  display: flex;
+  padding: 0 10px;
+  font-size: 25px;
+  color: #f5f5f5;
+  align-items: center;
+  opacity: .7;
+}
+header ul.menu li:hover {
+  opacity: 1;
+}
+header ul.menu li.logo {
+  text-indent: -9999px; /* html에 있는 Text를 안보이게 처리 */
+} 
+header ul.menu li.Korea {
+  font-size: 20px;
+}
+header ul.menu li.Austin {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+/* Navigation */
+nav {
+  background-color:rgba(255, 255, 255, .7);
+  border-bottom: 1px solid #d2d2d2;
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 60px;
+  z-index: 8;
+}
+nav ul.menu {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul.menu li {
+  display: flex;
+  padding: 0 10px;
+  font-size: 15px;
+  color: #f5f5f5;
+  align-items: center;
+  opacity: .7;
+}
+nav ul.menu li:hover {
+  opacity: 1;
+  font-size: 16px;
+}
+
+nav ul.menu li a {
+  width: 14px;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: center 10px;
+}
+
+nav ul.menu li.knox a {
+  background-image: url("../images/Samsung_Logo.svg");
+}
+
+
+/* main */
+main .items {
+  height: 480px;  /* main 전체 높이 */
+  display: flex;
+  flex-direction: column; /* 높이처리가 가능 */
+  flex-wrap: wrap;        /* 줄바꿈처리 가능 */
+  align-content: space-between; /* 남는 공간을 균등하게 */
+  margin-bottom: 10px;
+}
+main .items .map {
+  margin-top: 24px;
+}
+main .items .map:nth-child(6) {  /* 6번째 Items은 옆칸으로 이동하여 보여줌 */
+  padding-bottom: 10px;
+}
+main .items .map h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+main .items .map li {
+  margin-top: 12px;
+  font-size: 16px;
+}
+main .items .map li a {
+  color: #6e6e6e;
+  text-decoration: none;
+}
+main .items .map li a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+
+/* Section */
+section {
+  background-color: bisque;
+  border-top: 1px solid #d2d2d2;
+}
+section .items {
+  display: flex;
+}
+section .tem {
+  width: 200px;
+  height: 200px;
+  border: 1px solid green;
+}
+section .pfa {
+  width: 200px;
+  height: 200px;
+  border: 1px solid green;
+}
+
+
+/* Footer */
+footer {
+  border-top: 1px solid #d2d2d2;
+  color: #6e6e6e;
+}
+footer .inner {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  font-size: 14px;
+}
